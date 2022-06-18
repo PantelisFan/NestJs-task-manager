@@ -1,27 +1,41 @@
 {
   "compilerOptions": {
-    "removeComments": true,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "./dist",
-    "incremental": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "strict": true,
-    "baseUrl": ".",
-  }
+      "resolveJsonModule": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "skipLibCheck": true,
+      "lib": [
+          "es2019",
+          "dom"
+      ],
+      "module": "commonjs",
+      "target": "es2018",
+      "baseUrl": ".",
+      "strictNullChecks": true,
+      "paths": {
+          "*": [
+              "node_modules/*",
+              "typings/*"
+          ]
+      },
+      "typeRoots": [
+          "node_modules/@types",
+          "typings"
+      ],
+      "outDir": "./build"
+  },
+  "include": [
+      "./src/**/*",
+      "typings/*"
+  ],
+  "exclude": [
+      "node_modules",
+      "**/*.js",
+  ]
 }
