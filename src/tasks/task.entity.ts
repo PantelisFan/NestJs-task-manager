@@ -3,18 +3,15 @@ import { TaskStatus } from './task.model';
 
 @Entity()
 export class Task {
-    @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @Column()
+  @Column()
     title: string;
 
-    @Column()
+  @Column()
     description: string;
-    
-    @Column()
+
+  @Column()
     status: TaskStatus;
-
-    
-
 }

@@ -1,12 +1,10 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsNotEmpty, IsString } from 'class-validator';
 
-export class createTaskDto {
-
-    @IsNotEmpty()
+export default class CreateTaskDto {
+  @IsNotEmpty()
     title: string;
 
-    @IsNotEmpty()
-    @IsString()
+  @IsNotEmpty()
+  @IsString()
     description: string;
-
 }
